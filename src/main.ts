@@ -15,11 +15,11 @@ const template = document.querySelector("#template") as HTMLTemplateElement;
 
 testimonials.forEach((testimonial: Testimonial) => {
   const fragment = template.content.cloneNode(true) as HTMLElement;
-  const section = fragment.querySelector(".section");
-  const image = fragment.querySelector(".section__avatar");
-  const name = fragment.querySelector(".section__name");
-  const title = fragment.querySelector(".section__title");
-  const content = fragment.querySelector(".section__content");
+  const section = fragment.querySelector(".section") as HTMLElement;
+  const image = fragment.querySelector(".section__avatar") as HTMLImageElement;
+  const name = fragment.querySelector(".section__name") as HTMLHeadingElement;
+  const title = fragment.querySelector(".section__title") as HTMLHeadingElement;
+  const content = fragment.querySelector(".section__content") as HTMLSpanElement;
   section.classList.add(`section--${testimonial.firstName}`);
   image.setAttribute("src", testimonial.avatar);
   image.setAttribute("alt", testimonial.avatarAlt);
