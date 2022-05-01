@@ -26,5 +26,7 @@ testimonials.forEach((testimonial: Testimonial) => {
   name.textContent = testimonial.fullName;
   title.textContent = testimonial.title;
   content.textContent = testimonial.content;
+  const comment = document.createComment(testimonial.fullName);
+  grid.appendChild(comment);
   grid.appendChild(fragment);
 });
