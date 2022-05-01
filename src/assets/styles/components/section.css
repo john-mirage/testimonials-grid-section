@@ -1,0 +1,131 @@
+.section {
+    padding: 2.4rem 3.2rem 3.2rem 3.2rem;
+    border-radius: 0.8rem;
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+.section--daniel {
+    background-color: var(--color-moderate-violet);
+    background-image: url("/src/assets/images/bg-pattern-quotation.svg");
+    background-repeat: no-repeat;
+    background-position: top right 24px;
+}
+
+.section--jonathan { background-color: var(--color-very-dark-grayish-blue); }
+.section--jeanette { background-color: var(--color-white); }
+.section--patrick { background-color: var(--color-very-dark-blackish-blue); }
+.section--kira { background-color: var(--color-white); }
+
+.section__header {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2rem;
+}
+
+.section__avatar {
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 1.6rem;
+    border-width: 0.2rem;
+    border-style: solid;
+    margin-right: 1.6rem;
+}
+
+.section--daniel .section__avatar { border-color: var(--color-light-violet); }
+.section--jonathan .section__avatar { border-color: var(--color-very-dark-grayish-blue); margin-left: -0.2rem; }
+.section--patrick .section__avatar { border-color: var(--color-moderate-violet); }
+.section--jeanette .section__avatar { border-color: var(--color-white); margin-left: -0.2rem; }
+.section--kira .section__avatar { border-color: var(--color-white); margin-left: -0.2rem; }
+
+.section__person {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.section__name {
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 1;
+    margin: 0 0 0.2rem 0;
+}
+
+.section--daniel .section__name { color: var(--color-light-gray); }
+.section--jonathan .section__name { color: var(--color-light-gray); }
+.section--patrick .section__name { color: var(--color-light-gray); }
+.section--jeanette .section__name { color: var(--color-very-dark-blackish-blue); }
+.section--kira .section__name { color: var(--color-very-dark-blackish-blue); }
+
+.section__status {
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1;
+    opacity: 0.5;
+    margin: 0;
+}
+
+.section--daniel .section__status { color: var(--color-light-gray); }
+.section--jonathan .section__status { color: var(--color-light-gray); }
+.section--patrick .section__status { color: var(--color-light-gray); }
+.section--jeanette .section__status { color: var(--color-very-dark-blackish-blue); }
+.section--kira .section__status { color: var(--color-very-dark-blackish-blue); }
+
+.section__title {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 2.4rem;
+    margin: 0 0 1.6rem 0;
+}
+
+.section--daniel .section__title { color: var(--color-light-grayish-blue); }
+.section--jonathan .section__title { color: var(--color-light-grayish-blue); }
+.section--patrick .section__title { color: var(--color-light-grayish-blue); }
+.section--jeanette .section__title { color: var(--color-very-dark-blackish-blue); }
+.section--kira .section__title { color: var(--color-very-dark-blackish-blue); }
+
+.section__paragraph {
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    opacity: 0.7;
+    margin: 0;
+}
+
+.section--daniel .section__paragraph { color: var(--color-light-gray); }
+.section--jonathan .section__paragraph { color: var(--color-light-gray); }
+.section--patrick .section__paragraph { color: var(--color-light-gray); }
+.section--jeanette .section__paragraph { color: var(--color-very-dark-blackish-blue); }
+.section--kira .section__paragraph { color: var(--color-very-dark-blackish-blue); }
+
+@media screen and (min-width: 768px) {
+    .section--daniel,
+    .section--patrick,
+    .section--kira {
+        grid-column: span 2 / span 2;
+    }
+}
+
+@media screen and (min-width: 1158px) {
+    .section--daniel {
+        order: 1;
+    }
+
+    .section--jonathan {
+        order: 2;
+    }
+
+    .section--jeanette {
+        order: 4;
+    }
+
+    .section--patrick {
+        order: 5;
+    }
+
+    .section--kira {
+        order: 3;
+        grid-row: span 2 / span 2;
+        grid-column: span 1 / span 1;
+    }
+}

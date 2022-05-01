@@ -11,22 +11,20 @@
         <title>Testimonials Grid Section</title>
     </head>
 
-    <body class="bg-light-grayish-blue flex flex-col justify-center items-center min-h-screen">
-        <main class="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 px-6 py-[4.375rem]" id="grid">
+    <body class="page">
+        <main class="page__grid" id="grid">
             <template id="template">
-                <section class="testimonial-section px-8 pt-6 pb-8 rounded-lg shadow-xl">
-                    <div class="flex flex-row mb-5">
-                        <img class="testimonial-image w-7 h-7 rounded-full outline outline-2 outline-very-dark-grayish-blue mr-4" src="/src/assets/images/image-placeholder.svg" alt="placeholder icon">
-                        <div class="flex flex-col justify-between items-start">
-                            <h3 class="testimonial-name text-very-dark-grayish-blue text-[0.8125rem] leading-none font-medium"></h3>
-                            <p class="text-very-dark-grayish-blue opacity-50 text-[0.6875rem] leading-none tracking-wide font-normal">Verified Graduate</p>
+                <section class="section">
+                    <header class="section__header">
+                        <img class="section__avatar" src="/src/assets/images/image-placeholder.svg" alt="placeholder icon">
+                        <div class="section__person">
+                            <h3 class="section__name"></h3>
+                            <p class="section__status">Verified Graduate</p>
                         </div>
-                    </div>
-                    <h2 class="testimonial-title text-very-dark-blackish-blue text-xl font-semibold leading-6 tracking-wide mb-4"></h2>
-                    <p class="text-very-dark-grayish-blue opacity-70 text-[0.8125rem] font-medium leading-[1.125rem]">
-                        &#8220;
-                        <span class="testimonial-content"></span>
-                        &#8221;
+                    </header>
+                    <h2 class="section__title"></h2>
+                    <p class="section__paragraph">
+                        &#8220;<span class="section__content"></span>&#8221;
                     </p>
                 </section>
             </template>
