@@ -1,0 +1,135 @@
+.testimonial {
+    padding: 2.4rem 3.2rem 3.2rem 3.2rem;
+    border-radius: 0.8rem;
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+.testimonial:focus-visible {
+    outline-offset: 0.4rem;
+}
+
+.testimonial--daniel {
+    background-color: var(--color-moderate-violet);
+    background-image: url("/src/assets/images/bg-pattern-quotation.svg");
+    background-repeat: no-repeat;
+    background-position: top right 24px;
+}
+
+.testimonial--jonathan { background-color: var(--color-very-dark-grayish-blue); }
+.testimonial--jeanette { background-color: var(--color-white); }
+.testimonial--patrick { background-color: var(--color-very-dark-blackish-blue); }
+.testimonial--kira { background-color: var(--color-white); }
+
+.testimonial__header {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2rem;
+}
+
+.testimonial__avatar {
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 1.6rem;
+    border-width: 0.2rem;
+    border-style: solid;
+    margin-right: 1.6rem;
+}
+
+.testimonial--daniel .testimonial__avatar { border-color: var(--color-light-violet); }
+.testimonial--jonathan .testimonial__avatar { border-color: var(--color-very-dark-grayish-blue); margin-left: -0.2rem; }
+.testimonial--patrick .testimonial__avatar { border-color: var(--color-moderate-violet); }
+.testimonial--jeanette .testimonial__avatar { border-color: var(--color-white); margin-left: -0.2rem; }
+.testimonial--kira .testimonial__avatar { border-color: var(--color-white); margin-left: -0.2rem; }
+
+.testimonial__person {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.testimonial__username {
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 1;
+    margin: 0 0 0.2rem 0;
+}
+
+.testimonial--daniel .testimonial__username { color: var(--color-light-gray); }
+.testimonial--jonathan .testimonial__username { color: var(--color-light-gray); }
+.testimonial--patrick .testimonial__username { color: var(--color-light-gray); }
+.testimonial--jeanette .testimonial__username { color: var(--color-very-dark-blackish-blue); }
+.testimonial--kira .testimonial__username { color: var(--color-very-dark-blackish-blue); }
+
+.testimonial__status {
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1;
+    opacity: 0.5;
+    margin: 0;
+}
+
+.testimonial--daniel .testimonial__status { color: var(--color-light-gray); }
+.testimonial--jonathan .testimonial__status { color: var(--color-light-gray); }
+.testimonial--patrick .testimonial__status { color: var(--color-light-gray); }
+.testimonial--jeanette .testimonial__status { color: var(--color-very-dark-blackish-blue); }
+.testimonial--kira .testimonial__status { color: var(--color-very-dark-blackish-blue); }
+
+.testimonial__title {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 2.4rem;
+    margin: 0 0 1.6rem 0;
+}
+
+.testimonial--daniel .testimonial__title { color: var(--color-light-grayish-blue); }
+.testimonial--jonathan .testimonial__title { color: var(--color-light-grayish-blue); }
+.testimonial--patrick .testimonial__title { color: var(--color-light-grayish-blue); }
+.testimonial--jeanette .testimonial__title { color: var(--color-very-dark-blackish-blue); }
+.testimonial--kira .testimonial__title { color: var(--color-very-dark-blackish-blue); }
+
+.testimonial__paragraph {
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    opacity: 0.7;
+    margin: 0;
+}
+
+.testimonial--daniel .testimonial__paragraph { color: var(--color-light-gray); }
+.testimonial--jonathan .testimonial__paragraph { color: var(--color-light-gray); }
+.testimonial--patrick .testimonial__paragraph { color: var(--color-light-gray); }
+.testimonial--jeanette .testimonial__paragraph { color: var(--color-very-dark-blackish-blue); }
+.testimonial--kira .testimonial__paragraph { color: var(--color-very-dark-blackish-blue); }
+
+@media screen and (min-width: 768px) {
+    .testimonial--daniel,
+    .testimonial--patrick,
+    .testimonial--kira {
+        grid-column: span 2 / span 2;
+    }
+}
+
+@media screen and (min-width: 1158px) {
+    .testimonial--daniel {
+        order: 1;
+    }
+
+    .testimonial--jonathan {
+        order: 2;
+    }
+
+    .testimonial--jeanette {
+        order: 4;
+    }
+
+    .testimonial--patrick {
+        order: 5;
+    }
+
+    .testimonial--kira {
+        order: 3;
+        grid-row: span 2 / span 2;
+        grid-column: span 1 / span 1;
+    }
+}

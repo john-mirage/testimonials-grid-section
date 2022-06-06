@@ -1,0 +1,25 @@
+.testimonial-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.4rem;
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (min-width: 768px) {
+    .testimonial-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .testimonial-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (min-width: 1158px) {
+    .testimonial-list {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

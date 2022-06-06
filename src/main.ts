@@ -1,32 +1,15 @@
-import '@assets/styles/style.css';
-import testimonials from '@assets/data/testimonials';
+import './main.css';
+import data from "@data/data";
+import WebTestimonialList from "@components/web-testimonial-list";
+import WebTestimonial from "@components/web-testimonial";
+import WebTestimonialListInterface from "@interfaces/web-testimonial-list";
 
-interface Testimonial {
-  fullName: string;
-  firstName: string;
-  avatar: string;
-  avatarAlt: string;
-  title: string;
-  content: string;
-}
+customElements.define("web-testimonial-list", WebTestimonialList, { extends: "div" });
+customElements.define("web-testimonial", WebTestimonial, { extends: "article" });
 
-const grid = document.querySelector("#grid") as HTMLElement;
-const template = document.querySelector("#template") as HTMLTemplateElement;
 
-testimonials.forEach((testimonial: Testimonial) => {
-  const fragment = template.content.cloneNode(true) as HTMLElement;
-  const section = fragment.querySelector(".section") as HTMLElement;
-  const image = fragment.querySelector(".section__avatar") as HTMLImageElement;
-  const name = fragment.querySelector(".section__name") as HTMLHeadingElement;
-  const title = fragment.querySelector(".section__title") as HTMLHeadingElement;
-  const content = fragment.querySelector(".section__content") as HTMLSpanElement;
-  section.classList.add(`section--${testimonial.firstName}`);
-  image.setAttribute("src", testimonial.avatar);
-  image.setAttribute("alt", testimonial.avatarAlt);
-  name.textContent = testimonial.fullName;
-  title.textContent = testimonial.title;
-  content.textContent = testimonial.content;
-  const comment = document.createComment(testimonial.fullName);
-  grid.appendChild(comment);
-  grid.appendChild(fragment);
-});
+const mainElement = <HTMLElement>document.getElementById("main");
+const webTestimonialListComment = document.createComment(" Testimonial list ");
+const webTestimonialList = <WebTestimonialListInterface>document.createElement("div", { is: "web-testimonial-list" });
+webTestimonialList.testimonials = data;
+mainElement.append(webTestimonialListComment, webTestimonialList);

@@ -1,5 +1,6 @@
-@import "components/page.css";
-@import "components/section.css";
+@import "assets/styles/page.css";
+@import "assets/styles/testimonial-list.css";
+@import "assets/styles/testimonial.css";
 
 :root {
     --color-moderate-violet: hsl(263, 55%, 52%);

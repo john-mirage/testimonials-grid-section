@@ -7,6 +7,9 @@ export default defineConfig({
   resolve: {
     alias: {
       '@assets': resolve(__dirname, 'src/assets'),
+      '@data': resolve(__dirname, 'src/data'),
+      '@components': resolve(__dirname, 'src/components'),
+      '@interfaces': resolve(__dirname, 'src/interfaces'),
     },
   },
 });
