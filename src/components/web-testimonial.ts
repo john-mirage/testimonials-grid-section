@@ -48,11 +48,8 @@ class WebTestimonial extends HTMLElement {
       this.descriptionElement.textContent = this.testimonial.content;
       this.descriptionElement.setAttribute("id", `testimonial-description-${this.testimonial.id}`)
       this.classList.add("testimonial", `testimonial--${this.testimonial.firstName}`);
-      this.setAttribute("tabindex", "0");
-      this.setAttribute("aria-posinset", this.testimonial.id);
       this.setAttribute("aria-labelledby", `testimonial-username-${this.testimonial.id}`);
       this.setAttribute("aria-describedby", `testimonial-status-${this.testimonial.id} testimonial-title-${this.testimonial.id} testimonial-description-${this.testimonial.id}`);
-      this.setAttribute("aria-setsize", "5");
       this.append(this.fragment);
       this.initialCall = false;
     }

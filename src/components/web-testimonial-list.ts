@@ -27,7 +27,6 @@ class WebTestimonialList extends HTMLDivElement {
   connectedCallback() {
     if (this.initialCall) {
       this.classList.add("testimonial-list");
-      this.setAttribute("role", "feed");
       this.initialCall = false;
     }
   }
