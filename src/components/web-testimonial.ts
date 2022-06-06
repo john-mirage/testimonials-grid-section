@@ -7,7 +7,7 @@ class WebTestimonial extends HTMLElement {
   avatarElement: HTMLImageElement;
   usernameElement: HTMLHeadingElement;
   statusElement: HTMLParagraphElement;
-  titleElement: HTMLHeadingElement;
+  titleElement: HTMLParagraphElement;
   descriptionElement: HTMLSpanElement;
 
   constructor() {
@@ -19,7 +19,7 @@ class WebTestimonial extends HTMLElement {
     this.avatarElement = <HTMLImageElement>this.fragment.querySelector('[data-name="avatar"]');
     this.usernameElement = <HTMLHeadingElement>this.fragment.querySelector('[data-name="username"]');
     this.statusElement = <HTMLParagraphElement>this.fragment.querySelector('[data-name="status"]');
-    this.titleElement = <HTMLHeadingElement>this.fragment.querySelector('[data-name="title"]');
+    this.titleElement = <HTMLParagraphElement>this.fragment.querySelector('[data-name="title"]');
     this.descriptionElement = <HTMLSpanElement>this.fragment.querySelector('[data-name="description"]');
   }
 
